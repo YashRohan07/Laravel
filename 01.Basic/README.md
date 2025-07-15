@@ -28,7 +28,7 @@
 
 ##
 <img width="1235" height="576" alt="11" src="https://github.com/user-attachments/assets/516ba041-663e-46f4-be14-8cf84f6d8c28" />
-## When someone opens http://127.0.0.1:8000/employees, Laravel will run the index() method → which shows the employees.index Blade view.
+- When someone opens http://127.0.0.1:8000/employees, Laravel will run the index() method → which shows the employees.index Blade view.
 
 ##
 <img width="1229" height="602" alt="12" src="https://github.com/user-attachments/assets/28be02a6-1237-407b-bb00-4edc48aafe04" />
