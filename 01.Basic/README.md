@@ -33,8 +33,8 @@
 ##
 <img width="1229" height="602" alt="12" src="https://github.com/user-attachments/assets/28be02a6-1237-407b-bb00-4edc48aafe04" />
 
-## When You visit: /employees  => Laravel finds this route → calls EmployeeController@index → loads the employees.index Blade file.
-## You’ll see whatever HTML you put in resources/views/employees/index.blade.php.
+- When You visit: /employees  => Laravel finds this route → calls EmployeeController@index → loads the employees.index Blade file.
+- You’ll see whatever HTML you put in resources/views/employees/index.blade.php.
 
 ##
 <img width="1128" height="577" alt="13" src="https://github.com/user-attachments/assets/1bc062d7-c488-46e3-9f43-2b346a6c8b88" />
@@ -42,7 +42,7 @@
 ##
 <img width="1175" height="582" alt="14" src="https://github.com/user-attachments/assets/7e22d20c-007d-47d2-a20c-06ef99b55622" />
 
-## ✅ How Blade Works
+## How Blade Works
 
 When using **Blade**, Laravel’s template engine, you usually have:
 
