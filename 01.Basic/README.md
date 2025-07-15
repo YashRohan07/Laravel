@@ -33,8 +33,10 @@
 ##
 <img width="1229" height="602" alt="12" src="https://github.com/user-attachments/assets/28be02a6-1237-407b-bb00-4edc48aafe04" />
 
-- When You visit: /employees  => Laravel finds this route → calls EmployeeController@index → loads the employees.index Blade file.
-- You’ll see whatever HTML you put in resources/views/employees/index.blade.php.
+- When you visit `/employees`:
+  - Laravel matches the route in `web.php`
+  - It calls the `index` method in the `EmployeeController` class
+  - The `index` method returns the `employees.index` Blade view
 
 ##
 <img width="1128" height="577" alt="13" src="https://github.com/user-attachments/assets/1bc062d7-c488-46e3-9f43-2b346a6c8b88" />
