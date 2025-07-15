@@ -8,4 +8,4 @@
 
 ## How to run:
 1. Run `php artisan serve` to start the dev server.
-2. Open [http://127.0.0.1:8000/employees] to test.
+2. Open (http://127.0.0.1:8000/employees) to test.
