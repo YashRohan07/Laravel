@@ -27,4 +27,55 @@
 <img width="1001" height="498" alt="5" src="https://github.com/user-attachments/assets/0edc11a1-6ac6-48e4-96ae-f94c146f42e2" />
 
 ##
+<img width="1235" height="576" alt="11" src="https://github.com/user-attachments/assets/516ba041-663e-46f4-be14-8cf84f6d8c28" />
+## When someone opens http://127.0.0.1:8000/employees, Laravel will run the index() method → which shows the employees.index Blade view.
+
+##
+<img width="1229" height="602" alt="12" src="https://github.com/user-attachments/assets/28be02a6-1237-407b-bb00-4edc48aafe04" />
+
+## When You visit: /employees  => Laravel finds this route → calls EmployeeController@index → loads the employees.index Blade file.
+## You’ll see whatever HTML you put in resources/views/employees/index.blade.php.
+
+##
+<img width="1128" height="577" alt="13" src="https://github.com/user-attachments/assets/1bc062d7-c488-46e3-9f43-2b346a6c8b88" />
+
+##
+<img width="1175" height="582" alt="14" src="https://github.com/user-attachments/assets/7e22d20c-007d-47d2-a20c-06ef99b55622" />
+
+## ✅ How Blade Works
+
+When using **Blade**, Laravel’s template engine, you usually have:
+
+- **A layout file:**  
+  Example — `resources/views/layouts/app.blade.php`
+
+- **One or more view files:**  
+  Example — `resources/views/employees/index.blade.php`
+
+---
+
+### What does the layout do?
+
+- The layout is like a **master template** or **wrapper**.
+- It holds the **common HTML structure** for your whole site:
+  `<html>`, `<head>`, `<body>`, `<header>`, `<footer>`, etc.
+- You **reuse it** for every page.
+- It defines **sections** (for example, `@yield('content')`) that child views fill in.
+- This keeps your code **DRY** (*Don’t Repeat Yourself*) — so you don’t rewrite `<head>` and `<body>` for every page.
+
+---
+
+### What does the view file do?
+
+- A **view file** is the **specific content** for **one page**.
+- It tells Blade which layout to use:
+
+### What happens when you open `/employees`?
+
+- Laravel looks for `employees/index.blade.php`.
+- That view says: *“Use `layouts/app.blade.php` as my layout.”*
+- The view **sends its page content** into the `@yield('content')` spot.
+- The result is a **complete HTML page** with your **layout + page content combined**.
+  
+##
 <img width="1000" height="459" alt="6" src="https://github.com/user-attachments/assets/6f6a6956-17e4-4b39-93c4-118f9fbd3621" />
