@@ -37,7 +37,7 @@ Run:
 <img width="1366" height="379" alt="2" src="https://github.com/user-attachments/assets/1fb958aa-ba38-439a-8384-11d1e1dfec3f" />
 
 Then Run:
-php artisan migrate:fresh 
+- php artisan migrate:fresh 
 
 <img width="1360" height="604" alt="6" src="https://github.com/user-attachments/assets/826329d1-2b6e-40ad-b10b-96940a6c5ad0" />
 
@@ -50,8 +50,9 @@ What we did:
 
 ## STEP 4 — Create Eloquent Models
 - Eloquent Model is a PHP class that represents a table in your database.
-- It lets you easily insert, read, update, and delete rows without writing raw SQL.
-- Eloquent is Laravel’s fancy word for its ORM (Object-Relational Mapper).
+- Eloquent is what Laravel calls its built-in tool for working with your database.
+- It’s an ORM (Object-Relational Mapper) — which just means you can talk to your tables using PHP code instead of writing raw SQL.
+- With Eloquent, you use models to insert, read, update and delete data easily.
   
 Run:
 - php artisan make:model Employee
@@ -90,7 +91,7 @@ public function employee() {
   return $this->belongsTo(Employee::class);
 }
 
-Added foreign keys:
+'Added foreign keys:'
 - employees → department_id connects to departments.
 - employee_details → employee_id connects to employees.
   
@@ -122,7 +123,7 @@ What this does:
 - Fills them with fake data using factories & seeders
   
 Run:
-php artisan migrate:fresh --seed
+- php artisan migrate:fresh --seed
 
 <img width="1366" height="556" alt="13" src="https://github.com/user-attachments/assets/9ab2b2c0-e3df-4ad3-84d4-d27148842424" />
 
@@ -139,12 +140,12 @@ Check phpMyAdmin → you should see:
 
 
 ## In Summary 
-✔️ Migrations → Database blueprints. Tell Laravel how to create your tables
-✔️ Models → Interact with tables without SQL.
-✔️ Relationships → Link tables like family.
-✔️ Factories → Generate fake data.
-✔️ Seeders → Bulk-insert test data.
-✔️ migrate:fresh --seed → Reset + Rebuild DB + Fill with fake data
+- Migrations → Database blueprints. Tell Laravel how to create your tables
+- Models → Interact with tables without SQL.
+- Relationships → Link tables like family.
+- Factories → Generate fake data.
+- Seeders → Bulk-insert test data.
+- migrate:fresh --seed → Reset + Rebuild DB + Fill with fake data
 
 
 
