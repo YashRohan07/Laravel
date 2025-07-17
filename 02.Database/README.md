@@ -107,11 +107,11 @@ Run:
 <img width="1366" height="666" alt="11" src="https://github.com/user-attachments/assets/6862093b-45a6-45b3-a526-f6c0870b6c52" />
 
 ## STEP 7 — Create Seeders
-- A Seeder runs your factories to actually insert fake data into your database.
+A Seeder runs your factories to actually insert fake data into your database.
   
 Run:
-php artisan make:seeder DepartmentSeeder
-php artisan make:seeder EmployeeSeeder
+- php artisan make:seeder DepartmentSeeder
+- php artisan make:seeder EmployeeSeeder
 
 <img width="1366" height="472" alt="12" src="https://github.com/user-attachments/assets/6e5b6518-98ad-4ee6-b453-e1598a10766c" />
 
