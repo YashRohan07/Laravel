@@ -91,7 +91,7 @@ public function employee() {
   return $this->belongsTo(Employee::class);
 }
 
-'Added foreign keys:'
+`Added foreign keys:`
 - employees → department_id connects to departments.
 - employee_details → employee_id connects to employees.
   
