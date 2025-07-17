@@ -1,10 +1,13 @@
 # Database — Migrations, Models, Factories & Seeders
 
-## STEP 1 — Start XAMPP & Create DB
-1️⃣ Open XAMPP Control Panel
-2️⃣ Start Apache & MySQL
-3️⃣ Go to http://localhost/phpmyadmin
-4️⃣ Click Databases → create a DB named: employee_tracker
+## STEP 1 — Start XAMPP & Create Database
+Open XAMPP Control Panel.
+
+Start Apache & MySQL.
+
+Visit http://localhost/phpmyadmin.
+
+Click Databases → Create a new database named 'employee_tracker'.
 
 
 ## STEP 2 — Update .env
