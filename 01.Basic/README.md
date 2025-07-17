@@ -1,61 +1,82 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 01.Basic — Laravel Setup, Routing, Controller, Blade
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Topics Covered:
+- Laravel Installation
+- Routing (`web.php`)
+- Basic Controller (`EmployeeController`)
+- Blade Views (`layouts/app.blade.php`, `employees/index.blade.php`)
 
-## About Laravel
+## How to run:
+1. Run `composer install` (only if `vendor/` does not exist).
+2. Run `php artisan serve` to start the dev server.
+3. Open http://127.0.0.1:8000/employees to test.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##
+<img width="976" height="548" alt="1" src="https://github.com/user-attachments/assets/dd193935-458a-42ef-a1c9-2e2bb2cb95b2" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##
+<img width="1362" height="614" alt="2" src="https://github.com/user-attachments/assets/31a244c1-01b1-46fe-8fe7-d2be6e893f39" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##
+<img width="402" height="619" alt="3" src="https://github.com/user-attachments/assets/37022d6c-995a-4183-acac-bc9c1bbe00ab" />
 
-## Learning Laravel
+##
+<img width="1022" height="623" alt="4" src="https://github.com/user-attachments/assets/df9b2c01-c631-4feb-94f0-77185ea47c34" />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##
+<img width="1001" height="498" alt="5" src="https://github.com/user-attachments/assets/0edc11a1-6ac6-48e4-96ae-f94c146f42e2" />
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+##
+<img width="1235" height="576" alt="11" src="https://github.com/user-attachments/assets/516ba041-663e-46f4-be14-8cf84f6d8c28" />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##
+<img width="1229" height="602" alt="12" src="https://github.com/user-attachments/assets/28be02a6-1237-407b-bb00-4edc48aafe04" />
 
-## Laravel Sponsors
+- When you visit `/employees`:
+  - Laravel matches the route in `web.php`
+  - It calls the `index` method in the `EmployeeController` class
+  - The `index` method returns the `employees.index` Blade view
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+##
+<img width="1128" height="577" alt="13" src="https://github.com/user-attachments/assets/1bc062d7-c488-46e3-9f43-2b346a6c8b88" />
 
-### Premium Partners
+##
+<img width="1175" height="582" alt="14" src="https://github.com/user-attachments/assets/7e22d20c-007d-47d2-a20c-06ef99b55622" />
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## How Blade Works
 
-## Contributing
+When using **Blade**, Laravel’s template engine, you usually have:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **A layout file:**  
+  Example — `resources/views/layouts/app.blade.php`
 
-## Code of Conduct
+- **One or more view files:**  
+  Example — `resources/views/employees/index.blade.php`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### What does the layout do?
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- The layout is like a **master template** or **wrapper**.
+- It holds the **common HTML structure** for your whole site:
+  `<html>`, `<head>`, `<body>`, `<header>`, `<footer>`, etc.
+- You **reuse it** for every page.
+- It defines **sections** (for example, `@yield('content')`) that child views fill in.
+- This keeps your code **DRY** (*Don’t Repeat Yourself*) — so you don’t rewrite `<head>` and `<body>` for every page.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### What does the view file do?
+
+- A **view file** is the **specific content** for **one page**.
+- It tells Blade which layout to use:
+
+### What happens when you open `/employees`?
+
+- Laravel looks for `employees/index.blade.php`.
+- That view says: *“Use `layouts/app.blade.php` as my layout.”*
+- The view **sends its page content** into the `@yield('content')` spot.
+- The result is a **complete HTML page** with your **layout + page content combined**.
+  
+##
+<img width="1000" height="459" alt="6" src="https://github.com/user-attachments/assets/6f6a6956-17e4-4b39-93c4-118f9fbd3621" />
