@@ -25,6 +25,16 @@ class Employee extends Model
 
 
 ## STEP 3 — Build EmployeeController CRUD
+- index() → List with search, filters, pagination
+- create() → Show form for new employee
+- store() → Validate and save employee with details
+- show() → Display single employee with details
+- edit() → Show form to edit employee + details
+- update() → Validate and update employee (+ details)
+- destroy() → Soft delete employee
+- restore() → Bring back soft deleted employee
+
+
 
 ## STEP 4 — Make Views with Blade — Laravel’s template engine.
 - employees/index.blade.php — Show list, search, filters, delete, restore buttons.
@@ -33,7 +43,9 @@ class Employee extends Model
 - employees/show.blade.php — Detail view.
 
 ## STEP 5 — Test  All
-Run: `php artisan serve` Then Visit `http://localhost:8000`
+- Run: `php artisan serve` Then Visit `http://localhost:8000`
+- OR use XAMPP/WAMP/MAMP:
+Put your Laravel project in htdocs (XAMPP) -> Run Apache + MySQL -> Access http://localhost/your-folder/public
 - List: /employees shows all with search/filter
 - Create: /employees/create form works, validates, inserts
 - Show: /employees/{id} shows single record
