@@ -59,6 +59,8 @@ Put your Laravel project in htdocs (XAMPP) -> Run Apache + MySQL -> Access http:
 
 <img width="1004" height="535" alt="13" src="https://github.com/user-attachments/assets/73173d29-b6a0-4db1-9a43-776ba12ce4aa" />
 
+<img width="847" height="504" alt="21" src="https://github.com/user-attachments/assets/168b6b4f-83c2-4e8b-a9cb-656462f8bb93" />
+
 <img width="1366" height="364" alt="14" src="https://github.com/user-attachments/assets/96c6c5d4-7086-4df1-af9a-20a307da110f" />
 
 <img width="1196" height="345" alt="15" src="https://github.com/user-attachments/assets/d619460a-8ecd-4e86-a1fa-de53c6d338c1" />
@@ -71,7 +73,7 @@ Put your Laravel project in htdocs (XAMPP) -> Run Apache + MySQL -> Access http:
 
 <img width="1366" height="355" alt="20" src="https://github.com/user-attachments/assets/9761840f-a676-4933-8147-a40978a05189" />
 
-<img width="847" height="504" alt="21" src="https://github.com/user-attachments/assets/168b6b4f-83c2-4e8b-a9cb-656462f8bb93" />
+
 
 
 
