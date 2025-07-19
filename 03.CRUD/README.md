@@ -17,11 +17,9 @@
 - In `create_employees_table migration` file, add: `$table->softDeletes();`
 - Re-run migration: `php artisan migrate:fresh --seed`
 - In Employee.php:
+- 
 - use Illuminate\Database\Eloquent\SoftDeletes;
-- class Employee extends Model
-- {
--    use SoftDeletes;
-- }
+- class Employee extends Model { use SoftDeletes; }
 
 
 ## STEP 3 — Build EmployeeController CRUD
