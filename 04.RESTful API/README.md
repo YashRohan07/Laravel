@@ -1,80 +1,60 @@
-## 03.CRUD — Employee Management
+## RESTful API Development
 
-## STEP 1 — Make Routes
-- List all employees
-- Show form to create new employee
-- Store new employee
-- Show single employee
-- Show form to edit employee
-- Update employee
-- Delete employee
-- Restore soft deleted employee
-
-<img width="1175" height="706" alt="1" src="https://github.com/user-attachments/assets/fe2d151e-5148-45f0-baaa-450f6f7b1373" />
+- Created API routes with full CRUD operations
+- Developed EmployeeApiController and DepartmentApiController with validation and JSON responses
+- Implemented Sanctum token-based authentication
+- Users can log in with email & password to receive a secure API token.
+- Protected routes (employees, departments) require a valid Sanctum token.
+- Public routes (/api/login) allow users to authenticate.
+- Enabled soft deletes and restore functionality for employees
+- Included pagination and relationship loading for efficient data retrieval
+- Tested endpoints with Postman and ensured consistent response structure
 
 
-## STEP 2 — Add Soft Deletes to Model & Migration
-- In `create_employees_table migration` file, add: `$table->softDeletes();`
-- Re-run migration: `php artisan migrate:fresh --seed`
-- In Employee.php:
-- 
-- use Illuminate\Database\Eloquent\SoftDeletes;
-- class Employee extends Model { use SoftDeletes; }
+## Authentication
+- POST /api/login — Login with email & password to get the auth token
+- GET /api/user — Get current authenticated user info (requires token)
+
+## Departments
+- GET /api/departments — List all departments
+- POST /api/departments — Create a new department
+- GET /api/departments/{id} — Get a single department by ID
+- PUT/PATCH /api/departments/{id} — Update a department
+- DELETE /api/departments/{id} — Delete a department
+
+## Employees 
+- GET /api/employees — List all employees (with pagination)
+- POST /api/employees — Create a new employee (with UUID)
+- GET /api/employees/{id} — Get a single employee by UUID
+- PUT/PATCH /api/employees/{id} — Update an employee
+- DELETE /api/employees/{id} — Soft delete an employee
+- POST /api/employees/{id}/restore — Restore a soft-deleted employee
 
 
-## STEP 3 — Build EmployeeController CRUD
-- index() → List with search, filters, pagination
-- create() → Show form for new employee
-- store() → Validate and save employee with details
-- show() → Display single employee with details
-- edit() → Show form to edit employee + details
-- update() → Validate and update employee (+ details)
-- destroy() → Soft delete employee
-- restore() → Bring back soft deleted employee
+## 
 
-
-
-## STEP 4 — Make Views with Blade — Laravel’s template engine.
-- employees/index.blade.php — Show list, search, filters, delete, restore buttons.
-- employees/create.blade.php — Form for new employee add.
-- employees/edit.blade.php — Form to edit.
-- employees/show.blade.php — Detail view.
-
-## STEP 5 — Test  All
-Run: `php artisan serve` Then Visit `http://localhost:8000`
---
-OR use XAMPP: Put your Laravel project in htdocs (XAMPP) -> Run Apache + MySQL -> Access http://localhost/your-folder/public
---
-- List: /employees shows all with search/filter
-- Create: /employees/create form works, validates, inserts
-- Show: /employees/{id} shows single record
-- Edit: /employees/{id}/edit updates properly
-- Delete: Deletes employee (soft delete)
-- Restore: Restores deleted employee
-- Validation: Invalid form data shows error
-- Pagination: Works for large data
-
-<img width="1366" height="724" alt="11" src="https://github.com/user-attachments/assets/ca085162-02a4-47b4-af61-18450e5cf947" />
-
-<img width="759" height="555" alt="12" src="https://github.com/user-attachments/assets/18c4316c-3bf0-4238-bb06-99b44cbccb5c" />
-
-<img width="1004" height="535" alt="13" src="https://github.com/user-attachments/assets/73173d29-b6a0-4db1-9a43-776ba12ce4aa" />
-
-<img width="847" height="504" alt="21" src="https://github.com/user-attachments/assets/168b6b4f-83c2-4e8b-a9cb-656462f8bb93" />
-
-<img width="1366" height="364" alt="14" src="https://github.com/user-attachments/assets/96c6c5d4-7086-4df1-af9a-20a307da110f" />
-
-<img width="1196" height="345" alt="15" src="https://github.com/user-attachments/assets/d619460a-8ecd-4e86-a1fa-de53c6d338c1" />
-
-<img width="1203" height="438" alt="16" src="https://github.com/user-attachments/assets/1d649991-0de2-4231-95bb-21e5ea30cb7a" />
-
-<img width="1366" height="324" alt="18" src="https://github.com/user-attachments/assets/2f1bc90f-86a4-47de-a46c-ef62512bbf0a" />
-
-<img width="1366" height="357" alt="19" src="https://github.com/user-attachments/assets/eb6cf0a5-981c-459e-a2e2-fb445349a710" />
-
-<img width="1366" height="355" alt="20" src="https://github.com/user-attachments/assets/9761840f-a676-4933-8147-a40978a05189" />
-
-
-
-
-
+<img width="933" height="532" alt="11" src="https://github.com/user-attachments/assets/e143f39b-56c2-4f3e-9c31-cf1c27507e3a" />
+##
+<img width="934" height="557" alt="11 1" src="https://github.com/user-attachments/assets/df863398-935b-4fb2-92e5-75ffbfe3cf13" />
+##
+<img width="943" height="622" alt="12" src="https://github.com/user-attachments/assets/c2ddefac-d8a5-4bdd-bf65-d842a5adf9c6" />
+##
+<img width="932" height="614" alt="13" src="https://github.com/user-attachments/assets/739cb250-e50c-431f-b592-73e7baa2160a" />
+##
+<img width="936" height="494" alt="14" src="https://github.com/user-attachments/assets/afae40ac-70b0-4194-aaae-709ce1c44f3a" />
+##
+<img width="935" height="636" alt="15" src="https://github.com/user-attachments/assets/9c3abab9-2881-45b8-b0f9-8976dfef2276" />
+##
+<img width="1361" height="354" alt="16" src="https://github.com/user-attachments/assets/09f4dab8-e411-4ae1-a755-1446a20b1e20" />
+##
+<img width="941" height="619" alt="17" src="https://github.com/user-attachments/assets/f76a76d4-2794-4956-983a-2b13f3f5c85e" />
+##
+<img width="943" height="632" alt="18" src="https://github.com/user-attachments/assets/8b001cd3-40e4-4cfe-897b-a6f16426d289" />
+##
+<img width="939" height="607" alt="19" src="https://github.com/user-attachments/assets/d7202227-75f9-449f-b065-58748c76a6f5" />
+##
+<img width="940" height="631" alt="20" src="https://github.com/user-attachments/assets/bf4b9da0-e707-40a9-bfe7-50b711b83d6e" />
+##
+<img width="940" height="427" alt="21" src="https://github.com/user-attachments/assets/e55ef070-d505-472d-9ab6-a3367cb2aa3f" />
+##
+<img width="942" height="580" alt="22" src="https://github.com/user-attachments/assets/45937526-ccef-4eb2-816d-72abfa1cd976" />
