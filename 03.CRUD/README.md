@@ -42,7 +42,9 @@
 
 ## STEP 5 — Test  All
 Run: `php artisan serve` Then Visit `http://localhost:8000`
+--
 OR use XAMPP: Put your Laravel project in htdocs (XAMPP) -> Run Apache + MySQL -> Access http://localhost/your-folder/public
+--
 - List: /employees shows all with search/filter
 - Create: /employees/create form works, validates, inserts
 - Show: /employees/{id} shows single record
